@@ -3,19 +3,21 @@
 # For usage of the Script following Parameters has to be set:
 # Parameter:
 # Repos (Mandatory) - By change edit Function setRepo and the HELP (can delete or add more if needet):
-BAWAG_IOS_REPO="bawag-ios"
-BAWAG_ANDROID_REPO="bawag-android"
-EASYBANK_IOS_REPO="easybank-ios"
-EASYBANK_ANDROID_REPO="easybank-android"
+REPO_ONE="GW2Checker"
+REPO_TWO="TextToAppBaseApplication"
+REPO_THREE="BashScripts"
+REPO_FOUR=""
 
-REPO_LIST=("$BAWAG_IOS_REPO" "$EASYBANK_IOS_REPO" "$BAWAG_ANDROID_REPO" "$EASYBANK_ANDROID_REPO")
-REPO_CLONE_LIST=("BAWAG_IOS" "EASYBANK_IOS" "BAWAG_ANDROID" "EASYBANK_ANDROID")
+#RepoList Names
+REPO_LIST=("$REPO_ONE" "$REPO_THREE" "$REPO_TWO" "$REPO_FOUR")
+#RepoList Directoryes
+REPO_CLONE_LIST=("$REPO_ONE" "$REPO_THREE" "$REPO_TWO" "$REPO_FOUR")
 
 # GIT URL (Optional - only if need to clone) - By change edit Function setURLRepo and the HELP (can delete or add more if needet):
-BAWAG_IOS_URL="https://github.com/LeDominik/bawag-ios.git"
-BAWAG_ANDROID_URL="https://github.com/LeDominik/bawag-android.git"
-EASYBANK_IOS_URL="https://github.com/LeDominik/easybank-ios.git"
-EASYBANK_ANDROID_URL="https://github.com/LeDominik/easybank-android.git"
+RRPO_ONE_URL="https://github.com/NeETsuRa/GW2Checker.git"
+RRPO_TWO_URL="https://github.com/NeETsuRa/TextToAppBaseApplication.git"
+RRPO_THRE_URL="https://github.com/NeETsuRa/BashScripts.git"
+RRPO_FOUR_URL=""
 
 #
 # Functions Used and some usefull Functions:
@@ -61,20 +63,20 @@ ROOT=$(pwd)
 
 function setRepo() {
   case $1 in
-    BAWAG_IOS)
-      REPOSITORY="$BAWAG_IOS_REPO"
+    $REPO_ONE)
+      REPOSITORY="$REPO_ONE"
       break
       ;;
-    EASYBANK_IOS)
-      REPOSITORY="$EASYBANK_IOS_REPO"
+    $REPO_TWO)
+      REPOSITORY="$REPO_TWO"
       break
       ;;
-    BAWAG_ANDROID)
-      REPOSITORY="$BAWAG_ANDROID_REPO"
+    $REPO_THREE)
+      REPOSITORY="$REPO_THREE"
       break
       ;;
-    EASYBANK_ANDROID)
-      REPOSITORY="$EASYBANK_ANDROID_REPO"
+    $REPO_FOUR)
+      REPOSITORY="$REPO_FOUR"
       break
       ;;
   esac
@@ -82,17 +84,17 @@ function setRepo() {
 
 function setURLRepo() {
   case $1 in
-    BAWAG_IOS)
-      REPOSITORY="$BAWAG_IOS_URL"
+    $REPO_ONE)
+      REPOSITORY="$RRPO_ONE_URL"
       ;;
-    EASYBANK_IOS)
-      REPOSITORY="$EASYBANK_IOS_URL"
+    $REPO_TWO)
+      REPOSITORY="$RRPO_TWO_URL"
       ;;
-    BAWAG_ANDROID)
-      REPOSITORY="$BAWAG_ANDROID_URL"
+    $REPO_THREE)
+      REPOSITORY="$RRPO_THRE_URL"
       ;;
-    EASYBANK_ANDROID)
-      REPOSITORY="$EASYBANK_ANDROID_URL"
+    $REPO_FOUR)
+      REPOSITORY="$RRPO_FOUR_URL"
       ;;
   esac
 }
@@ -261,7 +263,7 @@ if [ $# -lt 1 ]
     printf "\n BRANCH REPO B_NAME         --> Creates a Branch with name B_NAME in REPO"
     printf "\n BRANCH_COMMIT REPO B_NAME  --> Creates a Branch with name B_NAME in REPO, adds all changes Commits and pushes them to GIT"
     printf "\n"
-    printf "\n REPO: FACELIFT, BAWAG_IOS, BAWAG_ANDROID, EASYBANK_IOS, EASYBANK_ANDROID"
+    printf "\n REPO: $REPO_ONE, $REPO_TWO, $REPO_THREE, $REPO_FOUR"
     printf "\n        (Repos can be set in the Script It self)"
     printf "\n"
     printf "\n"
