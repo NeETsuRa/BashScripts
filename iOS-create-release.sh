@@ -26,7 +26,7 @@ validateDevice ${BUILD_DEVICE}
 PROGNAME="$(basename $0)"
 TARGET_BUILD_NO="$(date -u +%y%m%d%H%M)"  # the current date/time in UTC
 PROJECT_DIR="$(git rev-parse --show-toplevel)"
-source "${PROJECT_DIR}/assets/bin/config.sh"
+source "${PROJECT_DIR}/iOS-config.sh"
 
 BUILD_BASE_DIR="${PROJECT_DIR}/${BUILD_BASE_DIR_FOLDER}"
 BUILD_OUT_DIR="${BUILD_BASE_DIR}/build/${TARGET_BUILD_NO}"
