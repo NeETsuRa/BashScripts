@@ -7,8 +7,8 @@
 ##      yarn install
 ##      pod install
 ##      curl http://localhost:8081/index.ios.bundle -o main.jsbundle
-##      xcodebuild CODE_SIGNING_REQUIRED="YES" CODE_SIGN_IDENTITY="iPhone Distribution: BAWAG P.S.K. Bank für Arbeit und Wirtschaft und Österreichische Postsparkasse Akti" PROVISIONING_PROFILE="3531ded1-4204-4906-a872-6f8a5e98dcc4" -sdk iphoneos -workspace "../BawagEasyBank.xcworkspace" -scheme "BAWAG_PSK_Debug_Gtt" clean archive -archivePath /Users/nejc.ravnjak/Documents/bawag-ios/bawag-ios/build/BAWAG_PSK.xcarchive/
-##      xcodebuild -exportArchive -archivePath /Users/nejc.ravnjak/Documents/bawag-ios/bawag-ios/build/BAWAG_PSK.xcarchive/   -exportOptionsPlist uat-exportOptions.plist -exportPath $PWD/build
+##      xcodebuild CODE_SIGNING_REQUIRED="YES" CODE_SIGN_IDENTITY="iPhone Distribution: " PROVISIONING_PROFILE="3531ded1-4204-4906-a872-6f8a5e98dcc4" -sdk iphoneos -workspace "../.xcworkspace" -scheme "Debug_Gtt" clean archive -archivePath /Users/nejc.ravnjak/Documents/ios/ios/build/XX.xcarchive/
+##      xcodebuild -exportArchive -archivePath /Users/nejc.ravnjak/Documents/ios/ios/build/XX.xcarchive/   -exportOptionsPlist uat-exportOptions.plist -exportPath $PWD/build
 ##
 
 TARGET_VERSION="$1"
@@ -183,7 +183,7 @@ function build_archive() {
     PROVISIONING_PROFILE_SPECIFIER="${DEVELOPMENT_TEAM}/${PROVISIONING_PROFILE_NAME}" \
     DEVELOPMENT_TEAM="${DEVELOPMENT_TEAM}" \
     -sdk iphoneos \
-    -workspace "${PROJECT_DIR}/BawagEasyBank.xcworkspace" \
+    -workspace "${PROJECT_DIR}/xxx.xcworkspace" \
     -scheme "${SCHEME}" \
     -archivePath "${ARCHIVE_DIR}" \
     -destination generic/platform=iOS \
