@@ -14,11 +14,11 @@ sh GIT.sh [parameters]
 ##### Info: 
 For detailed info on the Script just run the script without any parameters what will display Help.
 
-## Andro.sh
+## Andro___.sh
 The script for Native development of an Android Application. The script can make basic builds (with Taging on gitHub), display log of the connected Phone (or emulator), take videos and make screenshots.
 ##### Setup:
 1. Download the Script
-2. Edit the script (The Editable part is the first 20 lines where all specification should/can be set.) --> TODO: move the config to a different file
+2. Edit the Andro-config.sh (information where to find the needed Data can be found in the Config Script)
 3. Use
 ##### Usage:
 sh Andro.sh [parameter]
